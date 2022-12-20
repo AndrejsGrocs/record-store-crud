@@ -7,6 +7,8 @@
 
 ## RECORD STORE DB 
 
+### Project is in the development stage now.
+
 ```
 Description
 
@@ -19,5 +21,7 @@ Frontend is created with React
 
 
 ```
+
+
 
 #### Andrejs Grocs 2022
