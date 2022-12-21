@@ -34,6 +34,8 @@ Frontend is created with React
 
 Please add the dependencies to the project
 
+For using this DB
+MySQL and MySQL Workbench need to be installed on your computer
 
 Backend dependencies:
 

@@ -1,69 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-    height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: rgb(233, 225, 225);
+  align-items: center;
+  background-color: #3d7ea4;
   padding: 0px 100px;
   text-align: center;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
-.records{
-    display: flex;
-    gap: 10px;
+h1 {
+    margin-top: 100px;
+  font-size: 50px;
+  color: rgb(245, 241, 241);
 }
 
-.record{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    
+.rec-container {
+  width: 75%;
 }
 
-img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background-color: rgb(86, 82, 218);
+.records {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.delete{
-    border: none;
-    padding: 3px 6px;
-    background-color: #fff;
-    cursor: pointer;
+.record {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  background-color: #b0bbc7;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
 }
 
-.update{
-    border: none;
-    padding: 3px 6px;
-    background-color: #fff;
-    cursor: pointer;
 
+.footer{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
 }
 
-.form{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+p {
+  padding: -10 px;
 }
 
-input{
-    width: 300px;
-    height: 10px;
-    padding: 10px;
-    border: 1px solid gray;
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background-color: #794bc9;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
 }
 
-.form-button{
-    border: none;
-    padding: 10px;
-    background-color: rgb(76, 206, 100);
-    color: #fff;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
+
+
+.delete {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  text-decoration: none;
+}
+
+.update {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  text-decoration: none;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  width: 300px;
+  height: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.form-button {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.lnk {
+  text-decoration: none;
+  color: #fff;
+}
+
+.add-record-button {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 10px;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
 }

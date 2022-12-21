@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import coverImage from '../../src/img/black_vinyl.jpg'
+import Footer from "../pages/Footer";
 
 
 function Records() {
@@ -27,26 +29,33 @@ function Records() {
     }
   }
 
-  return <div>
-    <h1>Records Store</h1>
+  return <div className="rec-container">
+ 
+    <h1>Records Store Database</h1>
     <div className="records">
       {records.map(record =>(
         <div className="record" key={record.id}>
-          {record.cover && <img src={record.cover} alt="records cover image" />}
-          <h2>{record.artist}</h2>
-          <h2>{record.title}</h2>
-          <h2>{record.label}</h2>
-          <h2>{record.genre}</h2>
-          <h2>{record.year}</h2>
-          <h2>{record.price}</h2>
-          <button className="update"><Link to={`/update/${record.id}`}>Update</Link></button>
+          {/*  To get data form the database code
+         {record.cover && <img src={record.cover} alt="records cover image" />} */}
+          {record.cover && <img src={coverImage} alt="records cover image" />}
+          <p>Artist: {record.artist}</p>
+          <p>Title: {record.title}</p>
+          <p>Label: {record.label}</p>
+          <p>Genre: {record.genre}</p>
+          <p>Year: {record.year}</p>
+          <p>Price: {record.price.toFixed(2)}</p>
+          <button className="update"><Link className="lnk" to={`/update/${record.id}`}>Update</Link></button>
           <button className="delete" onClick={()=>{handleDelete(record.id)}}>Delete</button>
           
         </div>
       ))}
     </div>
-    <button><Link to='/add'>Add New Record</Link></button> 
+    <button className="add-record-button"><Link className="lnk" to='/add'>Add New Record</Link></button> 
+  
   </div>;
+
+  
+  
 }
 
 export default Records;
