@@ -2,7 +2,7 @@
     height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: rgb(233, 225, 225);
   padding: 0px 100px;
   text-align: center;
@@ -15,7 +15,6 @@
 
 .record{
     flex: 1;
-
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -43,4 +42,28 @@ img{
     background-color: #fff;
     cursor: pointer;
 
+}
+
+.form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input{
+    width: 300px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.form-button{
+    border: none;
+    padding: 10px;
+    background-color: rgb(76, 206, 100);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
 }

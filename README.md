@@ -2,25 +2,58 @@
 
 
 
-![PIC](https://blogs.mulesoft.com/wp-content/uploads/api-connect-devices.png)
+![PIC](https://miro.medium.com/max/1400/1*nwzoTtl5Eq3jNiuvMFULdw.jpeg)
 
 
 ## RECORD STORE DB 
 
-### Project is in the development stage now.
+### Project is in the DESIGN stage now.
+
 
 ```
 Description
 
-This is a project with possibility
-to CRUD data of the small record store 
-using MySQL.
+
+
+This project allows you to add, update and delete
+the data from the record store database.
+
+Displayed data can be used to present
+to the Record store clients
+
+For the backend is used MySQL database type
+and all the data is stored on the localhost.
 
 Frontend is created with React
 
+```
 
+## Technical information
 
 ```
+
+Please add the dependencies to the project
+
+
+Backend dependencies:
+
+        "cors": 
+        "express"
+        "mysql":
+        "mysql2": 
+        "nodemon":
+
+Client dependencies:
+
+        "axios"
+        "react"
+        "react-dom"
+        "react-router-dom"
+        "react-scripts"
+        "web-vitals":
+
+```
+
 
 
 

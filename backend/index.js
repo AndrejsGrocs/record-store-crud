@@ -63,6 +63,43 @@ app.post("/records", (req,res)=>{
     })
 })
 
+app.delete('/records/:id', (req,res)=>{
+    const recId = req.params.id
+    const q = 'DELETE FROM records WHERE id=?'
+
+    db.query(q, [recId], (err, data)=>{
+        if(err)
+        return res.send(err);
+        return res.json('Records has been deleted');
+
+    })
+})
+
+
+
+app.put('/records/:id', (req,res)=>{
+    const recId = req.params.id
+    const q = 'UPDATE records SET `artist` = ?, `title` = ?, `label` = ?,`cover` = ?,`genre` = ?,`year` = ?,`price` = ? WHERE id=? '
+
+    const values=[
+        req.body.artist,
+        req.body.title,
+        req.body.label,
+        req.body.cover,
+        req.body.genre,
+        req.body.year,
+        req.body.price
+    ]
+    
+
+    db.query(q, [...values, recId], (err, data)=>{
+        if(err)
+        return res.send(err);
+        return res.json('Records has been updated');
+
+    })
+})
+
 app.listen(8800, ()=>{
     console.log('Connected to the backend')
 })

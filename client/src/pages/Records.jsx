@@ -18,6 +18,15 @@ function Records() {
     fetchAllRecords()
   }, []);
 
+  const handleDelete = async (id) =>{
+    try {
+      await axios.delete("http://localhost:8800/records/"+id);
+      window.location.reload() //refreshing the page if everything is ok
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return <div>
     <h1>Records Store</h1>
     <div className="records">
@@ -30,8 +39,8 @@ function Records() {
           <h2>{record.genre}</h2>
           <h2>{record.year}</h2>
           <h2>{record.price}</h2>
-          <button className="update">Update</button>
-          <button className="delete">Delete</button>
+          <button className="update"><Link to={`/update/${record.id}`}>Update</Link></button>
+          <button className="delete" onClick={()=>{handleDelete(record.id)}}>Delete</button>
           
         </div>
       ))}
