@@ -42,7 +42,7 @@ app.get("/records", (req, res)=>{
  })
 
 app.post("/records", (req,res)=>{
-    const q = "INSERT INTO records(`artist`,`title`,`label`,`cover`,`genre`,`year`) VALUES (?)";
+    const q = "INSERT INTO records(`artist`,`title`,`label`,`cover`,`genre`,`year`, `price`) VALUES (?)";
     const values = [
         //"title","title","title","title","title","title",
 
@@ -53,6 +53,7 @@ app.post("/records", (req,res)=>{
         req.body.cover,
         req.body.genre,
         req.body.year,
+        req.body.price
 ]
 
     db.query(q, [values], (err, data)=>{

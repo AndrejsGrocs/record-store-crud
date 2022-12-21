@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function Records() {
   const [records, setRecords] = useState([]);
@@ -8,7 +10,7 @@ function Records() {
     const fetchAllRecords = async () => {
       try {
         const res = await axios.get("http://localhost:8800/records");
-        console.log(res);
+        setRecords(res.data) ;
       } catch (err) {
         console.log(err);
       }
@@ -16,7 +18,23 @@ function Records() {
     fetchAllRecords()
   }, []);
 
-  return <div>Records</div>;
+  return <div>
+    <h1>Records Store</h1>
+    <div >
+      {records.map(record =>(
+        <div className="record" key={record.id}>
+          {record.cover && <img src={record.cover} alt="records cover image" />}
+          <h2>{record.artist}</h2>
+          <h2>{record.title}</h2>
+          <h2>{record.label}</h2>
+          <h2>{record.genre}</h2>
+          <h2>{record.year}</h2>
+          <h2>{record.price}</h2>
+        </div>
+      ))}
+    </div>
+    <button><Link to='/add'>Add New Record</Link></button> 
+  </div>;
 }
 
 export default Records;
