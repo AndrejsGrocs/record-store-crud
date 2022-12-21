@@ -20,7 +20,7 @@ function Records() {
 
   return <div>
     <h1>Records Store</h1>
-    <div >
+    <div className="records">
       {records.map(record =>(
         <div className="record" key={record.id}>
           {record.cover && <img src={record.cover} alt="records cover image" />}
@@ -30,6 +30,9 @@ function Records() {
           <h2>{record.genre}</h2>
           <h2>{record.year}</h2>
           <h2>{record.price}</h2>
+          <button className="update">Update</button>
+          <button className="delete">Delete</button>
+          
         </div>
       ))}
     </div>
