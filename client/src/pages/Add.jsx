@@ -37,8 +37,9 @@ function Add() {
 
   console.log(record)
 
-// the name in the input syntax nedd to be the same as in a const [record, setRecord]
+// the name in the input syntax need to be the same as in a const [record, setRecord]
   return (
+    
     <div className='form'>
       <h1>Add New Record</h1>
       
@@ -49,7 +50,7 @@ function Add() {
       <input type='text' placeholder='genre' onChange={handleChange} name='genre'></input>
       <input type='text' placeholder='year' onChange={handleChange} name='year'></input>
       <input type='number' placeholder='price' onChange={handleChange} name='price'></input>
-      <button className='form-button' onClick={handleClick} >Add</button>
+      <button className='form-button-update' onClick={handleClick} >Add</button>
     </div>
   )
 }

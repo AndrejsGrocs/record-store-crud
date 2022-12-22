@@ -26,6 +26,15 @@ and all the data is stored on the localhost.
 
 Frontend is created with React
 
+
+
+```
+
+```
+
+Implemented features:
+
+Pagination
 ```
 
 ## Technical information
@@ -36,6 +45,8 @@ Please add the dependencies to the project
 
 For using this DB
 MySQL and MySQL Workbench need to be installed on your computer
+
+
 
 Backend dependencies:
 
