@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import coverImage from '../../src/img/black_vinyl.jpg'
-import Footer from "../pages/Footer";
+
+import Pagination from "./Pagination";
 
 
 function Records() {
@@ -18,9 +19,9 @@ function Records() {
     const fetchAllRecords = async () => {
       try {
         const res = await axios.get("http://localhost:8800/records");
-        // setLoading(true) 
+        setLoading(true) 
         setRecords(res.data) ;
-        // setLoading(false) 
+        setLoading(false) 
       } catch (err) {
         console.log(err);
       }
@@ -43,6 +44,8 @@ function Records() {
   const indexOfFirstRecord = indexOfLastRecord - itemsPerPage
   const currentRecord =  records.slice(indexOfFirstRecord, indexOfLastRecord)
 
+  // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return <div className="rec-container">
  
@@ -65,12 +68,17 @@ function Records() {
           <p>Price: {record.price.toFixed(2)}</p>
           <button className="update"><Link className="lnk" to={`/update/${record.id}`}>Update</Link></button>
           {/* <button className="delete" onClick={()=>{handleDelete(record.id)}}>Delete</button> */}
+       
           
         </div>
       ))}
     </div>
+
     <button className="add-record-button"><Link className="lnk" to='/add'>Add New Record</Link></button> 
-  
+     <Pagination itemsPerPage={itemsPerPage} 
+          totalRecords={records.length}
+            paginate={paginate}
+          />
   </div>;
 
   
