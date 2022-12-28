@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
+import styled, { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles } from "../themes";
 
 function Add() {
+
+
 
   //taking values form the inputs
 
@@ -39,7 +43,7 @@ function Add() {
 
 // the name in the input syntax need to be the same as in a const [record, setRecord]
   return (
-    
+
     <div className='form'>
       <h1>Add New Record</h1>
       
@@ -52,6 +56,7 @@ function Add() {
       <input type='number' placeholder='price' onChange={handleChange} name='price'></input>
       <button className='form-button-update' onClick={handleClick} >Add</button>
     </div>
+    
   )
 }
 

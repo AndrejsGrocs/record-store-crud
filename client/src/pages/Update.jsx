@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import axios from "axios";
+import { GlobalStyles } from '../themes';
 
 function Update() {
 
@@ -44,6 +45,7 @@ function Update() {
 
 // the name in the input syntax need to be the same as in a const [record, setRecord]
   return (
+    
   
     <div className='form'>
       <h1>Update Record</h1>
@@ -57,6 +59,7 @@ function Update() {
       <input type='number' placeholder='price' onChange={handleChange} name='price'></input>
       <button className='form-button-update' onClick={handleClick}>Update</button>
     </div>
+    
   
   )
 }

@@ -7,7 +7,17 @@
 
 ## RECORD STORE DB 
 
+<br>
+
 ### Project is in the DESIGN stage now.
+
+# Please use 'Add New Record' to put some data into the DataBase, 
+# to be able to use the features of the app.
+
+<br>
+
+
+
 
 
 ```
@@ -35,6 +45,7 @@ Frontend is created with React
 Implemented features:
 
 Pagination
+Dark Mode
 ```
 
 ## Technical information
